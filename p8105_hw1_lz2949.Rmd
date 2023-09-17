@@ -35,43 +35,27 @@ describe the pattern
 ```{r}
 # create a data frame 
 # a random sample of size 10 from a standard Normal distribution
-random_sample = rnorm(10)
-# indicating whether elements of the sample are greater than 0
-logical_vec = random_sample>0
-# create a character vector of length 10
-char_vec = c(TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE)
-# create a factor vector of length 10, with 3 different factor "levels"
-vec_factor = factor(c("level1","level2","level3","level1","level2","level3","level1","level2","level3","level3"))
+dataframe = tibble(
+  random_sample = rnorm(10),
+  logical_vec = random_sample>0,
+  char_vec = c("I","have","a","pet","cat","called","jumy","he","is   in","black-and-white"),
+  vec_factor =factor(c("level1","level2","level3","level1","level2","level3","level1","level2","level3","level3")))
+
+# calculate the mean value of each variable 
+library(tidyverse)
+mean_random_sample = pull(dataframe,random_sample)
+mean_logical_vector = pull(dataframe,logical_vec)
+mean_character_vector = pull(dataframe,char_vec)
+mean_factor_vector = pull(dataframe,vec_factor)
 
 ```
 
-Try to take the mean of each variable in the datafraome. 
+The mean value of each variable is as follows: 
 
-1. The mean of random sample is: `r mean(random_sample)`. 
+1. Mean value of random sample is `r round(mean(mean_random_sample),digits=4)`. 
 
-2. The mean of logical vector is: `r mean(logical_vec)`. 
+2. Mean value of logical vector is `r mean(mean_logical_vector)`. 
 
-3. The mean of character vector is: `r mean(char_vec)`. 
+3. Mean value of character vector is `r mean(mean_character_vector)`. 
 
-4. The mean of factor vector is: `r mean(vec_factor)`. 
-
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+4. Mean value of factor vector is `r mean(mean_factor_vector)`. 
