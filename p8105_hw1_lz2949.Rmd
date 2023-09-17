@@ -5,8 +5,21 @@ date: "2023-09-17"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Problem 1
+```{r}
+# installed the 'moderndive' package in console
+# load the 'moderndive' library
+library(moderndive)
+data("early_january_weather")
+# find variables in this dataset: names, values
+names(early_january_weather)
+# size of the dataset using nrow and ncol
+nrow(early_january_weather)
+ncol(early_january_weather)
+# the mean temperature 
+mean(early_january_weather$temp)
+
+
 ```
 
 ## R Markdown
