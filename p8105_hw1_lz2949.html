@@ -398,9 +398,16 @@ random_sample = rnorm(10)
 # indicating whether elements of the sample are greater than 0
 logical_vec = random_sample&gt;0
 # create a character vector of length 10
-char_vec = c(&quot;I&quot;,&quot;have&quot;,&quot;a&quot;,&quot;pet&quot;,&quot;cat&quot;,&quot;called&quot;,&quot;jumy&quot;,&quot;he&quot;,&quot;is&quot;,&quot;black-and-white&quot;)
+char_vec = c(TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE)
 # create a factor vector of length 10, with 3 different factor &quot;levels&quot;
 vec_factor = factor(c(&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level3&quot;))</code></pre>
+<p>Try to take the mean of each variable in the datafraome.</p>
+<ol style="list-style-type: decimal">
+<li><p>The mean of random sample is: 0.1545218.</p></li>
+<li><p>The mean of logical vector is: 0.5.</p></li>
+<li><p>The mean of character vector is: 0.7.</p></li>
+<li><p>The mean of factor vector is: NA.</p></li>
+</ol>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>
