@@ -362,20 +362,12 @@ display: none;
 <pre class="r"><code># installed the &#39;moderndive&#39; package in console
 # load the &#39;moderndive&#39; library
 library(moderndive)
-data(&quot;early_january_weather&quot;)
-# find variables in this dataset: names, values
-names(early_january_weather)</code></pre>
-<pre><code>##  [1] &quot;origin&quot;     &quot;year&quot;       &quot;month&quot;      &quot;day&quot;        &quot;hour&quot;      
-##  [6] &quot;temp&quot;       &quot;dewp&quot;       &quot;humid&quot;      &quot;wind_dir&quot;   &quot;wind_speed&quot;
-## [11] &quot;wind_gust&quot;  &quot;precip&quot;     &quot;pressure&quot;   &quot;visib&quot;      &quot;time_hour&quot;</code></pre>
-<pre class="r"><code># size of the dataset using nrow and ncol
-nrow(early_january_weather)</code></pre>
-<pre><code>## [1] 358</code></pre>
-<pre class="r"><code>ncol(early_january_weather)</code></pre>
-<pre><code>## [1] 15</code></pre>
-<pre class="r"><code># the mean temperature 
-mean(early_january_weather$temp)</code></pre>
-<pre><code>## [1] 39.58212</code></pre>
+data(&quot;early_january_weather&quot;)</code></pre>
+<p>Variables names of this data are: origin, year, month, day, hour,
+temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure,
+visib, time_hour. The size of this data is characterized by its rows and
+columns. This data contains 358 rows and 15 columns. Among these
+variables, temperature has a mean value of 39.58 degrees.</p>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>

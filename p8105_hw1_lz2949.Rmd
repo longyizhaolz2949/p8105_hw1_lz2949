@@ -11,16 +11,11 @@ output: html_document
 # load the 'moderndive' library
 library(moderndive)
 data("early_january_weather")
-# find variables in this dataset: names, values
-names(early_january_weather)
-# size of the dataset using nrow and ncol
-nrow(early_january_weather)
-ncol(early_january_weather)
-# the mean temperature 
-mean(early_january_weather$temp)
-
 
 ```
+
+Variables names of this data are: `r names(early_january_weather)`. The size of this data is characterized by its rows and columns. This data contains `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among these variables, temperature has a mean value of `r round(mean(early_january_weather$temp), digits=2)` degrees. 
+
 
 ## R Markdown
 
