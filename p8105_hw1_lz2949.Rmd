@@ -23,7 +23,8 @@ library(tidyverse)
 # plot temp vs. time_hour using ggplot 
 # color points using the humid variable
 ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
-
+# save the scatterplot using ggsave function
+ggsave("scatterplot_hw1_p1.pdf")
 ```
 
 
