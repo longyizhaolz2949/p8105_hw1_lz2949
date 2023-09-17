@@ -16,6 +16,16 @@ data("early_january_weather")
 
 Variables names of this data are: `r names(early_january_weather)`. The size of this data is characterized by its rows and columns. This data contains `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among these variables, temperature has a mean value of `r round(mean(early_january_weather$temp), digits=2)` degrees. 
 
+Next step is to make a scatterplot of temperature vs. time hour and describe patterns in this plot. 
+
+```{r}
+library(tidyverse)
+# plot temp vs. time_hour using ggplot 
+# color points using the humid variable
+ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
+
+```
+
 
 ## R Markdown
 
