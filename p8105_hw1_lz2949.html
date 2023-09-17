@@ -388,6 +388,19 @@ ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
 <pre class="r"><code># save the scatterplot using ggsave function
 ggsave(&quot;scatterplot_hw1_p1.pdf&quot;)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
+<p>describe the pattern</p>
+</div>
+<div id="problem-2" class="section level2">
+<h2>Problem 2</h2>
+<pre class="r"><code># create a data frame 
+# a random sample of size 10 from a standard Normal distribution
+random_sample = rnorm(10)
+# indicating whether elements of the sample are greater than 0
+logical_vec = random_sample&gt;0
+# create a character vector of length 10
+char_vec = c(&quot;I&quot;,&quot;have&quot;,&quot;a&quot;,&quot;pet&quot;,&quot;cat&quot;,&quot;called&quot;,&quot;jumy&quot;,&quot;he&quot;,&quot;is&quot;,&quot;black-and-white&quot;)
+# create a factor vector of length 10, with 3 different factor &quot;levels&quot;
+vec_factor = factor(c(&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level3&quot;))</code></pre>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>
