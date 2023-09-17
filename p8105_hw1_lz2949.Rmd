@@ -27,8 +27,7 @@ ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
 ggsave("scatterplot_hw1_p1.pdf")
 ```
 
-describe the pattern
-
+The temperature fluctuates in the first half of January; the overall trend was increasing from. Humidity data show similar trends as the temperature did. 
 
 ## Problem 2
 
@@ -43,19 +42,30 @@ dataframe = tibble(
 
 # calculate the mean value of each variable 
 library(tidyverse)
-mean_random_sample = pull(dataframe,random_sample)
-mean_logical_vector = pull(dataframe,logical_vec)
-mean_character_vector = pull(dataframe,char_vec)
-mean_factor_vector = pull(dataframe,vec_factor)
+out_random_sample = pull(dataframe,random_sample)
+out_logical_vector = pull(dataframe,logical_vec)
+out_character_vector = pull(dataframe,char_vec)
+out_factor_vector = pull(dataframe,vec_factor)
 
 ```
 
 The mean value of each variable is as follows: 
 
-1. Mean value of random sample is `r round(mean(mean_random_sample),digits=4)`. 
+1. Mean value of random sample is `r round(mean(out_random_sample),digits=4)`. 
 
-2. Mean value of logical vector is `r mean(mean_logical_vector)`. 
+2. Mean value of logical vector is `r mean(out_logical_vector)`. 
 
-3. Mean value of character vector is `r mean(mean_character_vector)`. 
+3. Mean value of character vector is `r mean(out_character_vector)`. 
 
-4. Mean value of factor vector is `r mean(mean_factor_vector)`. 
+4. Mean value of factor vector is `r mean(out_factor_vector)`. 
+
+From the results we can see that means of character vector and factor vector variables cannot be calculated. 
+
+```{r}
+# convert variables from one type to another using as.numeric function
+r_s = as.numeric(out_random_sample)
+r_s = as.numeric(out_logical_vector)
+r_s = as.numeric(out_character_vector)
+r_s = as.numeric(out_factor_vector)
+```
+From the result, character vector is successfully converted to numerical values while factor vector is not. 

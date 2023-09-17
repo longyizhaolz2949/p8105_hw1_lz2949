@@ -388,7 +388,9 @@ ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
 <pre class="r"><code># save the scatterplot using ggsave function
 ggsave(&quot;scatterplot_hw1_p1.pdf&quot;)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
-<p>describe the pattern</p>
+<p>The temperature fluctuates in the first half of January; the overall
+trend was increasing from. Humidity data show similar trends as the
+temperature did.</p>
 </div>
 <div id="problem-2" class="section level2">
 <h2>Problem 2</h2>
@@ -402,17 +404,27 @@ dataframe = tibble(
 
 # calculate the mean value of each variable 
 library(tidyverse)
-mean_random_sample = pull(dataframe,random_sample)
-mean_logical_vector = pull(dataframe,logical_vec)
-mean_character_vector = pull(dataframe,char_vec)
-mean_factor_vector = pull(dataframe,vec_factor)</code></pre>
+out_random_sample = pull(dataframe,random_sample)
+out_logical_vector = pull(dataframe,logical_vec)
+out_character_vector = pull(dataframe,char_vec)
+out_factor_vector = pull(dataframe,vec_factor)</code></pre>
 <p>The mean value of each variable is as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>Mean value of random sample is -0.5699.</p></li>
-<li><p>Mean value of logical vector is 0.3.</p></li>
+<li><p>Mean value of random sample is -0.0766.</p></li>
+<li><p>Mean value of logical vector is 0.5.</p></li>
 <li><p>Mean value of character vector is NA.</p></li>
 <li><p>Mean value of factor vector is NA.</p></li>
 </ol>
+<p>From the results we can see that means of character vector and factor
+vector variables cannot be calculated.</p>
+<pre class="r"><code># convert variables from one type to another using as.numeric function
+r_s = as.numeric(out_random_sample)
+r_s = as.numeric(out_logical_vector)
+r_s = as.numeric(out_character_vector)</code></pre>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre class="r"><code>r_s = as.numeric(out_factor_vector)</code></pre>
+<p>From the result, character vector is successfully converted to
+numerical values while factor vector is not.</p>
 </div>
 
 
