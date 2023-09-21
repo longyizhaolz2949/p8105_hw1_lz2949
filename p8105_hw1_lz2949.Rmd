@@ -61,8 +61,6 @@ The mean value of each variable is as follows:
 
 From the results we can see that means of character vector and factor vector variables cannot be calculated. 
 
-# problem 3 
-
 
 ```{r}
 # convert variables from one type to another using as.numeric function

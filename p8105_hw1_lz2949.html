@@ -411,16 +411,13 @@ out_character_vector = pull(dataframe,char_vec)
 out_factor_vector = pull(dataframe,vec_factor)</code></pre>
 <p>The mean value of each variable is as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>Mean value of random sample is 0.0275.</p></li>
-<li><p>Mean value of logical vector is 0.4.</p></li>
+<li><p>Mean value of random sample is 0.1863.</p></li>
+<li><p>Mean value of logical vector is 0.7.</p></li>
 <li><p>Mean value of character vector is NA.</p></li>
 <li><p>Mean value of factor vector is NA.</p></li>
 </ol>
 <p>From the results we can see that means of character vector and factor
 vector variables cannot be calculated.</p>
-</div>
-<div id="problem-3" class="section level1">
-<h1>problem 3</h1>
 <pre class="r"><code># convert variables from one type to another using as.numeric function
 r_s = as.numeric(out_random_sample)
 r_s = as.numeric(out_logical_vector)
