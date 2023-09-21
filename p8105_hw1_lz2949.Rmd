@@ -14,7 +14,7 @@ data("early_january_weather")
 
 ```
 
-Variables names of this data are: `r names(early_january_weather)`. The size of this data is characterized by its rows and columns. This data contains `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among these variables, temperature has a mean value of `r round(mean(early_january_weather$temp), digits=2)` degrees. 
+Variables names of this data are: `r names(early_january_weather)`. There are total `r length(names(early_january_weather))` variables in the data. The size of this data is characterized by its rows and columns. This data contains `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among these variables, temperature has a mean value of `r round(mean(early_january_weather$temp), digits=2)` degrees. 
 
 Next step is to make a scatterplot of temperature vs. time hour and describe patterns in this plot. 
 
@@ -27,7 +27,7 @@ ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
 ggsave("scatterplot_hw1_p1.pdf")
 ```
 
-The temperature fluctuates in the first half of January; the overall trend was increasing from. Humidity data show similar trends as the temperature did. 
+The temperature fluctuates in the first half of January; the overall trend was increasing. Humidity data show similar trends as the temperature did. 
 
 ## Problem 2
 
@@ -60,6 +60,9 @@ The mean value of each variable is as follows:
 4. Mean value of factor vector is `r mean(out_factor_vector)`. 
 
 From the results we can see that means of character vector and factor vector variables cannot be calculated. 
+
+# problem 3 
+
 
 ```{r}
 # convert variables from one type to another using as.numeric function

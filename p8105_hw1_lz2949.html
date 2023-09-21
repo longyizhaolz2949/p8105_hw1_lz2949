@@ -365,9 +365,10 @@ library(moderndive)
 data(&quot;early_january_weather&quot;)</code></pre>
 <p>Variables names of this data are: origin, year, month, day, hour,
 temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure,
-visib, time_hour. The size of this data is characterized by its rows and
-columns. This data contains 358 rows and 15 columns. Among these
-variables, temperature has a mean value of 39.58 degrees.</p>
+visib, time_hour. There are total 15 variables in the data. The size of
+this data is characterized by its rows and columns. This data contains
+358 rows and 15 columns. Among these variables, temperature has a mean
+value of 39.58 degrees.</p>
 <p>Next step is to make a scatterplot of temperature vs. time hour and
 describe patterns in this plot.</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
@@ -389,7 +390,7 @@ ggplot(early_january_weather, aes(y=temp,x=time_hour, color=humid))+geom_point()
 ggsave(&quot;scatterplot_hw1_p1.pdf&quot;)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <p>The temperature fluctuates in the first half of January; the overall
-trend was increasing from. Humidity data show similar trends as the
+trend was increasing. Humidity data show similar trends as the
 temperature did.</p>
 </div>
 <div id="problem-2" class="section level2">
@@ -410,13 +411,16 @@ out_character_vector = pull(dataframe,char_vec)
 out_factor_vector = pull(dataframe,vec_factor)</code></pre>
 <p>The mean value of each variable is as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>Mean value of random sample is -0.0766.</p></li>
-<li><p>Mean value of logical vector is 0.5.</p></li>
+<li><p>Mean value of random sample is 0.0275.</p></li>
+<li><p>Mean value of logical vector is 0.4.</p></li>
 <li><p>Mean value of character vector is NA.</p></li>
 <li><p>Mean value of factor vector is NA.</p></li>
 </ol>
 <p>From the results we can see that means of character vector and factor
 vector variables cannot be calculated.</p>
+</div>
+<div id="problem-3" class="section level1">
+<h1>problem 3</h1>
 <pre class="r"><code># convert variables from one type to another using as.numeric function
 r_s = as.numeric(out_random_sample)
 r_s = as.numeric(out_logical_vector)
