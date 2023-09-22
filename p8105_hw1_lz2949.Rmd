@@ -37,11 +37,11 @@ The temperature fluctuates in the first half of January; the overall trend was i
 dataframe = tibble(
   random_sample = rnorm(10),
   logical_vec = random_sample>0,
-  char_vec = c("I","have","a","pet","cat","called","jumy","he","is   in","black-and-white"),
+  char_vec = c("I","have","a","pet","cat","called","jumy","he","is","black-and-white"),
   vec_factor =factor(c("level1","level2","level3","level1","level2","level3","level1","level2","level3","level3")))
 
 # calculate the mean value of each variable 
-library(tidyverse)
+
 out_random_sample = pull(dataframe,random_sample)
 out_logical_vector = pull(dataframe,logical_vec)
 out_character_vector = pull(dataframe,char_vec)
@@ -64,9 +64,13 @@ From the results we can see that means of character vector and factor vector var
 
 ```{r}
 # convert variables from one type to another using as.numeric function
-r_s = as.numeric(out_random_sample)
-r_s = as.numeric(out_logical_vector)
-r_s = as.numeric(out_character_vector)
-r_s = as.numeric(out_factor_vector)
+l_v = as.numeric(out_logical_vector)
+c_v = as.numeric(out_character_vector)
+f_v = as.numeric(out_factor_vector)
+
 ```
+Now, mean value of character vector is `r mean(c_v)`, mean value of logical vector is `r mean(l_v)`, and mean value of factor vector is `r mean(f_v)`. 
+
 From the result, character vector is successfully converted to numerical values while factor vector is not. 
+
+In character vector containing non-numeric values, letters cannot be directly converted to numeric values. In factor vector, R would internally assign numbers based on values' 'levels', which is numeric. 

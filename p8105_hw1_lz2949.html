@@ -400,18 +400,18 @@ temperature did.</p>
 dataframe = tibble(
   random_sample = rnorm(10),
   logical_vec = random_sample&gt;0,
-  char_vec = c(&quot;I&quot;,&quot;have&quot;,&quot;a&quot;,&quot;pet&quot;,&quot;cat&quot;,&quot;called&quot;,&quot;jumy&quot;,&quot;he&quot;,&quot;is   in&quot;,&quot;black-and-white&quot;),
+  char_vec = c(&quot;I&quot;,&quot;have&quot;,&quot;a&quot;,&quot;pet&quot;,&quot;cat&quot;,&quot;called&quot;,&quot;jumy&quot;,&quot;he&quot;,&quot;is&quot;,&quot;black-and-white&quot;),
   vec_factor =factor(c(&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level1&quot;,&quot;level2&quot;,&quot;level3&quot;,&quot;level3&quot;)))
 
 # calculate the mean value of each variable 
-library(tidyverse)
+
 out_random_sample = pull(dataframe,random_sample)
 out_logical_vector = pull(dataframe,logical_vec)
 out_character_vector = pull(dataframe,char_vec)
 out_factor_vector = pull(dataframe,vec_factor)</code></pre>
 <p>The mean value of each variable is as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>Mean value of random sample is 0.1863.</p></li>
+<li><p>Mean value of random sample is 0.5786.</p></li>
 <li><p>Mean value of logical vector is 0.7.</p></li>
 <li><p>Mean value of character vector is NA.</p></li>
 <li><p>Mean value of factor vector is NA.</p></li>
@@ -419,13 +419,18 @@ out_factor_vector = pull(dataframe,vec_factor)</code></pre>
 <p>From the results we can see that means of character vector and factor
 vector variables cannot be calculated.</p>
 <pre class="r"><code># convert variables from one type to another using as.numeric function
-r_s = as.numeric(out_random_sample)
-r_s = as.numeric(out_logical_vector)
-r_s = as.numeric(out_character_vector)</code></pre>
+l_v = as.numeric(out_logical_vector)
+c_v = as.numeric(out_character_vector)</code></pre>
 <pre><code>## Warning: NAs introduced by coercion</code></pre>
-<pre class="r"><code>r_s = as.numeric(out_factor_vector)</code></pre>
+<pre class="r"><code>f_v = as.numeric(out_factor_vector)</code></pre>
+<p>Now, mean value of character vector is NA, mean value of logical
+vector is 0.7, and mean value of factor vector is 2.1.</p>
 <p>From the result, character vector is successfully converted to
 numerical values while factor vector is not.</p>
+<p>In character vector containing non-numeric values, letters cannot be
+directly converted to numeric values. In factor vector, R would
+internally assign numbers based on values’ ‘levels’, which is
+numeric.</p>
 </div>
 
 
